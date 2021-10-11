@@ -1,8 +1,9 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Image(models.Model):
-    image_link = models.ImageField(upload_to ='pics/')
+    image_link = CloudinaryField()
     name = models.CharField(max_length = 100)
     description = models.TextField()
     location = models.ForeignKey('Location',null = True,on_delete=models.CASCADE)
