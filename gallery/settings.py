@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 
 import dj_database_url
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 from decouple import config,Csv
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -30,6 +33,12 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 ALLOWED_HOSTS = []
 
+# adding config
+cloudinary.config( 
+  cloud_name = config('cloud_name'), 
+  api_key = config('API_KEY'), 
+  api_secret = config('api_secret')
+)
 
 # Application definition
 
@@ -42,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'snaps.apps.SnapsConfig',
     'bootstrap3',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
