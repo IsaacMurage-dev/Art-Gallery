@@ -3,7 +3,7 @@ from .models import Image,Location,Category
 # Create your tests here.
 class ImageTestClass(TestCase):
     def setUp(self):
-        self.location = Location(location_name = 'dubai')
+        self.location = Location(location_name = 'denmark')
         self.location.save()
         self.category = Category(category_name = 'travel')
         self.category.save()
@@ -33,7 +33,7 @@ class ImageTestClass(TestCase):
         find_img = self.new_image.search_by_cate('travel')
         self.assertTrue(len(find_img)==1)
     def test_search_image_by_location(self):
-        find_img = self.new_image.search_by_loc('dubai')
+        find_img = self.new_image.search_by_loc('denmark')
         self.assertTrue(len(find_img)==1)
     def tearDown(self):
         Image.objects.all().delete()
@@ -42,7 +42,7 @@ class ImageTestClass(TestCase):
 
 class LocationTestClass(TestCase):
     def setUp(self):
-        self.location=Location(location_name='dubai')
+        self.location=Location(location_name='denmark')
         self.location.save()
     def test_instance(self):
         self.assertTrue(isinstance(self.location,Location))
