@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+{% block content %}
+<div class="container-fluid">
+<div class="row">
+
+{% for img in images %}
+<div id="image"class="col-md-4 col-sm-12 col-xs-12 col-lg-4">
+<img src="{{img.image_link.url}}" class="img-responsive my_Img" alt="{{image.description}}">
+
+<div id = 'butn'>
+<button class="btn-info btn-sm">INFO</button>
+</div>
+  <div id="Modal_pic" class="modal">
+
+  <!-- The Close Button -->
+    <span class="close">&times;</span>
+    {{image.image_link.url}}
+  <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img1">
+
+  <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+</div>
+
+{% endfor %}
+</div>
+</div>
+{% endblock %}
