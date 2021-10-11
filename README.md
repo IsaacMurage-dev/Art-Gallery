@@ -23,14 +23,14 @@ This  an application whereby a user can:
 * Run `python3.8 -m venv --without-pip virtual` to start serve using virtual
 
 * To activate virtual insert: 
-`source virtual/bin/activate`
+  * `source virtual/bin/activate`
 
-`curl https://bootstrap.pypa.io/get-pip.py | python`
+  * `curl https://bootstrap.pypa.io/get-pip.py | python`
 
-`pip install -r requirements.txt`
+  * `pip install -r requirements.txt`
 
 * To copy .env.example to .env:
-`cp .env.example .env`
+   * `cp .env.example .env`
 
 
 * Edit .env file and replace the values with your own Cloudinary and database credentials
