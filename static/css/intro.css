@@ -4,6 +4,12 @@
     cursor: pointer;
     transition: 0.4s;
 }
+.input-group{
+    margin-top: -60px !important;
+}
+.nav-link{
+    margin-right: -20px !important;
+}
 
 .my_Img:hover {
   opacity: 0.6;
