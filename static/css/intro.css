@@ -8,10 +8,10 @@
     margin-top: -60px !important;
 }
 .nav-item{
-    margin-left: 140px !important;
+    margin-left: 250px !important;
     font-size: larger;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
+    font-weight: bolder;
 }
 .dropdown-menu{
     background-color: greenyellow;
